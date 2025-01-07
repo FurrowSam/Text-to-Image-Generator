@@ -57,5 +57,5 @@ if st.button("Generate Image"):
     with st.spinner("Generating image..."):
         output_path, image = generate_image(prompt, num_inference_steps=num_inference_steps, 
                                             guidance_scale=guidance_scale, height=height, width=width)
-    st.image(image, caption=f"Generated Image: {prompt}", use_column_width=True)
+    st.image(image, caption=f"Generated Image: {prompt}", use_container_width=True)
     st.success(f"Image saved to {output_path}")
