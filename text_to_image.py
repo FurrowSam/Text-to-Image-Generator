@@ -15,7 +15,7 @@ def generate_image(
     # Determine the available device
     if torch.backends.mps.is_available():  # For Apple Silicon or Metal on macOS
         device = "mps"
-    elif hasattr(torch, "has_mps") and torch.has_mps:  # For DirectML (AMD GPUs on Windows)
+    elif hasattr(torch, "has_mps") and torch.backends.mps.is_built():  # For DirectML (AMD GPUs on Windows)
         device = "dml"
     elif torch.cuda.is_available():  # For NVIDIA GPUs with CUDA
         device = "cuda"
