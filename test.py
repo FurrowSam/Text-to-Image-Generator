@@ -12,8 +12,8 @@ except Exception as e:
 def matrix_multiplication(device1, device2):
     try:
         # Ensure matrices are on the correct devices
-        a = torch.randn(10000, 10000, device=device1)
-        b = torch.randn(10000, 10000, device=device2)
+        a = torch.randn(15000, 15000, device=device1)
+        b = torch.randn(15000, 15000, device=device2)
 
         if device1 != device2:
             print(f"Transferring tensor from {device2} to {device1} for compatibility.")
