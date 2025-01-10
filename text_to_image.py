@@ -1,6 +1,8 @@
 import torch
 from diffusers import StableDiffusionPipeline
 import os
+import time
+import torch_directml
 
 def generate_image(
     prompt,
